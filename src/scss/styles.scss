@@ -1,0 +1,23 @@
+$primary: #FE9900;
+$secondary: #F8F8F8;
+$font-weight-bold: 700;
+$input-padding-y: 30px;
+$input-btn-focus-box-shadow: none;
+$input-btn-focus-width: 0;
+
+@import 'node_modules/bootstrap/scss/bootstrap';
+
+.btn
+.input {
+  font-size: 15px;
+  font-weight: 700;
+  padding: 15px 30px;
+}
+
+.dropdown-toggle {
+  padding: 20px 30px!important;
+}
+
+a {
+  text-decoration: none!important;
+}
