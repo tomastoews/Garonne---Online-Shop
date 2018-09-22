@@ -88,17 +88,23 @@
 </template>
 
 <script>
+console.log(process.env.NODE_ENV);
+
+const assetsBaseUrl = process.env.NODE_ENV === 'development'
+                      ? '../assets'
+                      : 'img';
+
 export default {
     data() {
         return {
             previewItem: {
-                image: 'images/product_8168646846.jpg',
+                image: `${assetsBaseUrl}/product_8168646846.jpg`,
                 header_text: 'POPULAR',
                 title_part1: 'The new comfort',
                 title_part2: 'for your home',
                 product_title: 'The Product Name',
                 product_subtitle: 'FOR FAMILIES',
-                product_image: 'images/product_8168646846_small.png',
+                product_image: `${assetsBaseUrl}/product_8168646846_small.png`,
                 product_id: '8168646846'
             },
             products: [
@@ -106,25 +112,25 @@ export default {
                     id: '6565454542000854',
                     name: 'Travel Hiking Camping',
                     price: 34.49,
-                    image: 'images/product_8406846846846.jpg'
+                    image: `${assetsBaseUrl}/product_8406846846846.jpg`
                 },
                 {
                     id: '74148018408',
                     name: 'Travel Hiking Camping',
                     price: 34.49,
-                    image: 'images/product_8406846846846.jpg'
+                    image: `${assetsBaseUrl}/product_8406846846846.jpg`
                 },
                 {
                     id: '81080181818888',
                     name: 'Travel Hiking Camping',
                     price: 34.49,
-                    image: 'images/product_8406846846846.jpg'
+                    image: `${assetsBaseUrl}/product_8406846846846.jpg`
                 },
                 {
                     id: '741480145245208',
                     name: 'Travel Hiking Camping',
                     price: 34.49,
-                    image: 'images/product_8406846846846.jpg'
+                    image: `${assetsBaseUrl}/product_8406846846846.jpg`
                 }
             ],
             products_home: [

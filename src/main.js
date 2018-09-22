@@ -6,7 +6,7 @@ import BootstrapVue from 'bootstrap-vue'
 import './scss/styles.scss'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 
-import { library as fortawesomeLibrary } from '@fortawesome/fontawesome-svg-core';
+import { library as fortawesomeLibrary } from '@fortawesome/fontawesome-svg-core'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
