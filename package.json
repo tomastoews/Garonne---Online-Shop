@@ -1,12 +1,10 @@
 {
-  "name": "Garonne",
+  "name": "garonne",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "deploy": "gh-pages -d dist",
-    "build-and-deploy": "vue-cli-service build && gh-pages -d dist",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
