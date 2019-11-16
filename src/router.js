@@ -4,6 +4,10 @@ import Home from '@/components/Home.vue'
 
 Vue.use(Router)
 
+const base = process.env.NODE_ENV === 'production'
+            ? '/garonne/'
+            : '/';
+
 export default new Router({
   routes: [
     {
@@ -13,9 +17,9 @@ export default new Router({
     },
     {
       path: '*',
-      name: 'random',
       component: Home
     }
   ],
-  mode: 'history'
+  mode: 'history',
+  base: base
 })

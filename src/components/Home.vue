@@ -22,7 +22,7 @@
                                     <p class="font-weight-bold text-dark text-primary m-0">{{ previewItem.product_title }}</p>
                                     <p class="text-secondary m-0">{{ previewItem.product_subtitle }}</p>
                                 </div>
-                                <div class="col-4 action">
+                                <div class="col-4 action p-0">
                                     <button class="btn btn-primary text-light btn-lg m-0">Shop now</button>
                                 </div>
                             </b-card-body>
@@ -88,23 +88,25 @@
 </template>
 
 <script>
-console.log(process.env.NODE_ENV);
+import product from '../assets/product_8168646846.jpg';
+import productSmall from '../assets/product_8168646846_small.png';
+import productSingle from '../assets/product_8406846846846.jpg';
 
-const assetsBaseUrl = process.env.NODE_ENV === 'development'
-                      ? '../assets'
-                      : 'img';
+const imagesBaseUrl = process.env.NODE_ENV === 'development'
+                      ? ''
+                      : '/garonne/';
 
 export default {
     data() {
         return {
             previewItem: {
-                image: `${assetsBaseUrl}/product_8168646846.jpg`,
+                image: imagesBaseUrl + product,
                 header_text: 'POPULAR',
                 title_part1: 'The new comfort',
                 title_part2: 'for your home',
                 product_title: 'The Product Name',
                 product_subtitle: 'FOR FAMILIES',
-                product_image: `${assetsBaseUrl}/product_8168646846_small.png`,
+                product_image: imagesBaseUrl + productSmall,
                 product_id: '8168646846'
             },
             products: [
@@ -112,25 +114,25 @@ export default {
                     id: '6565454542000854',
                     name: 'Travel Hiking Camping',
                     price: 34.49,
-                    image: `${assetsBaseUrl}/product_8406846846846.jpg`
+                    image: imagesBaseUrl + productSingle
                 },
                 {
                     id: '74148018408',
                     name: 'Travel Hiking Camping',
                     price: 34.49,
-                    image: `${assetsBaseUrl}/product_8406846846846.jpg`
+                    image: imagesBaseUrl + productSingle
                 },
                 {
                     id: '81080181818888',
                     name: 'Travel Hiking Camping',
                     price: 34.49,
-                    image: `${assetsBaseUrl}/product_8406846846846.jpg`
+                    image: imagesBaseUrl + productSingle
                 },
                 {
                     id: '741480145245208',
                     name: 'Travel Hiking Camping',
                     price: 34.49,
-                    image: `${assetsBaseUrl}/product_8406846846846.jpg`
+                    image: imagesBaseUrl + productSingle
                 }
             ],
             products_home: [

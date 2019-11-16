@@ -2,7 +2,7 @@
 <b-navbar toggleable="md" type="light">
   <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
   <b-navbar-brand href="#">
-    <img id="logo" class="mx-auto" src="../assets/logo.png" height="30" alt="Logo">
+    <img id="logo" class="mx-auto" :src="logo" height="30" alt="Logo">
   </b-navbar-brand>
 
   <b-collapse is-nav id="nav_collapse">
@@ -16,14 +16,14 @@
                 class="mr-sm-2" 
                 type="text"
                 :placeholder="searchInputPlaceholder"/>
-                <button size="sm" 
-                        class="btn btn-link display-4" 
-                        type="button">
-                    <font-awesome-icon icon="search"/>
-                </button>
+            <button size="sm" 
+                    class="btn btn-link display-4" 
+                    type="button">
+                <font-awesome-icon icon="search"/>
+            </button>
         </b-nav-form>
 
-        <!-- Departmens Button -->
+        <!-- Departments Button -->
         <b-nav-item-dropdown text="Departments" class="m-md-2" right>
             <b-dropdown-item>Clothes</b-dropdown-item>
             <b-dropdown-item>Furnitures</b-dropdown-item>
@@ -50,9 +50,16 @@
 </template>
 
 <script>
+import logo from '../assets/logo.png';
+
+const imagesBaseUrl = process.env.NODE_ENV === 'development'
+                      ? ''
+                      : '/garonne/';
+
 export default {
     data() {
         return {
+            logo: imagesBaseUrl + logo,
             searchInputPlaceholder: 'What are you looking for?'
         }
     }

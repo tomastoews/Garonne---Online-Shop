@@ -4,7 +4,7 @@
 
             <!-- Logo Section -->
             <div class="row py-5">
-                <img id="logo" class="mx-auto" src="../assets/logo.png" alt="Logo">
+                <img id="logo" class="mx-auto" :src="logo" alt="Logo">
             </div>
 
             <!-- Buttons Section -->
@@ -69,9 +69,16 @@
 </template>
 
 <script>
+import logo from '../assets/logo.png';
+
+const imagesBaseUrl = process.env.NODE_ENV === 'development'
+                      ? ''
+                      : '/garonne/';
+
 export default {
     data () {
         return {
+            logo: imagesBaseUrl + logo,
             showSearchInput: false,
             searchInputPlaceholder: 'What are you looking for?',
             searchInputText: ''
