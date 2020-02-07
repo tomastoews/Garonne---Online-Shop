@@ -1,21 +1,5 @@
 # Garonne
+A simple online shop landing page UI. Built with Vue.js, BootstrapVue and Sass
 
-## Project setup
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
+# Demo
+https://www.projects.tomastoews.de/garonne
